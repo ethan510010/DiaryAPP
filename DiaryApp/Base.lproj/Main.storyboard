@@ -297,22 +297,6 @@
             </objects>
             <point key="canvasLocation" x="2711.1999999999998" y="955.77211394302856"/>
         </scene>
-        <!--日記總覽-->
-        <scene sceneID="y4F-QN-n4d">
-            <objects>
-                <viewController storyboardIdentifier="DiaryCategoryViewController" id="sMI-BN-1A2" customClass="DiaryCategoryViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lm8-yS-55N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="DRz-mf-IpE"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="日記總覽" id="ZZq-zb-WF0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U4s-XD-mDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="708" y="1639"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mc7-89-VcM">
             <objects>
@@ -326,7 +310,7 @@
                     <connections>
                         <segue destination="ucP-ae-Udj" kind="relationship" relationship="viewControllers" id="YnZ-gd-DsP"/>
                         <segue destination="qhT-HA-jJB" kind="relationship" relationship="viewControllers" id="JUp-yu-xzT"/>
-                        <segue destination="sMI-BN-1A2" kind="relationship" relationship="viewControllers" id="EKY-hP-JOh"/>
+                        <segue destination="DgW-Zd-tWd" kind="relationship" relationship="viewControllers" id="fmP-jz-bUS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOI-Al-yIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,6 +336,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFq-od-dzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="449" y="-1002"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="T9V-Tn-JNm">
+            <objects>
+                <tableViewController storyboardIdentifier="DiaryCategoryTableViewController" id="DgW-Zd-tWd" customClass="DiaryCategoryTableViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zeC-SC-Iw6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="diaryCategoryCell" id="jFf-hi-Wbs" customClass="DiaryCategoryTableViewCell" customModule="DiaryApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jFf-hi-Wbs" id="2Ql-A9-rTW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i84-PZ-JXL">
+                                            <rect key="frame" x="108" y="11" width="251" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="partContentLabel" destination="i84-PZ-JXL" id="Uhm-yC-2m5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DgW-Zd-tWd" id="ebi-xm-J0j"/>
+                            <outlet property="delegate" destination="DgW-Zd-tWd" id="gvc-0h-Z7p"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="DYy-km-TmQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owB-UY-L3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629.60000000000002" y="1744.6776611694154"/>
         </scene>
         <!--新增日記-->
         <scene sceneID="bJi-C4-kGZ">

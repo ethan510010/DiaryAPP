@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C205" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Diary" representedClassName=".Diary" syncable="YES">
+        <attribute name="diaryContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diaryImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="diaryLocation" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Diary" positionX="-54" positionY="-9" width="128" height="90"/>
+    </elements>
+</model>
